@@ -9,9 +9,23 @@ def nyc_pigeon_organizer(data)
           else
             hash[name][key] = []
         end
-        pigeons[name][key].push(stats.to_s)
+      end
+    end
+  end
+  pigeons.each do |name, value|
+    value.each do |pigeons_stats, array|
+      data.each do |key, value|
+        value.each do |stats, array|
+
+          array.each do |element|
+            if element == name && pigeons_stats == key
+
+              pigeons[name][pigeons_stats] << stats.to_s
+            end
+          end
+        end
       end
     end
   end
   pigeons
-end
+end    
