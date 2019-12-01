@@ -1,4 +1,4 @@
 def nyc_pigeon_organizer(data)
-  pigeon = {}
+  pigeons = {}
   data.map
 end
