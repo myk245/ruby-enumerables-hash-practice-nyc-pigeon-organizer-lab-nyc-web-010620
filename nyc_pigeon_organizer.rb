@@ -4,7 +4,10 @@ def nyc_pigeon_organizer(data)
     value.each do |stats, array|
       array.each do |name|
         if pigeons[name] == nil
-          pigeons[name][key] = []
+          pigeons[name] = {}
+            pigeons[name][key] = []
+          else
+            hash[name][key] = []
         end
         pigeons[name][key].push(stats.to_s)
       end
